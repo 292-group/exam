@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ua" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <title>Карусель українських діячів</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+</head>
+
+<body>
+    <div class="slider owl-carousel">
+        <div class="card">
+            <div class="img">
+                <img src="img/shevch_soldat.jpg" alt="shevch_soldat" class="img_author">
+            </div>
+            <div class="content">
+                <div class="title">
+                    Тарас Шевченко
+                </div>
+                <div class="sub-title">
+                    Український поет
+                </div>
+                <p>
+                    Український поет, прозаїк, мислитель, живописець, гравер, етнограф, громадський діяч. Національний герой і символ України. Діяч українського національного руху, член Кирило-Мефодіївського братства. Академік Імператорської академії мистецтв.
+                </p>
+            </div>
+        </div>
+        <div class="card">
+            <div class="img">
+                <img src="img/lesja_ukrainka.jpg" alt="lesja_ukrainka" class="img_author">
+            </div>
+            <div class="content">
+                <div class="title">
+                    Леся Українка
+                </div>
+                <div class="sub-title">
+                    Українська письменниця
+                </div>
+                <p>
+                    Українська письменниця, перекладачка та культурна діячка, співзасновниця літературного гуртка «Плеяда» та групи Українська соціал-демократія. У сучасній українській традиції входить до переліку найвідоміших жінок давньої та сучасної України.
+                </p>
+            </div>
+        </div>
+        <div class="card">
+            <div class="img">
+                <img src="img/ivan_franko.jpg" alt="ivan_franko" class="img_author">
+            </div>
+            <div class="content">
+                <div class="title">
+                    Іван Франко
+                </div>
+                <div class="sub-title">
+                    Видатний український поет
+                </div>
+                <p>
+                    Видатний український поет, прозаїк, драматург, літературний критик, публіцист, перекладач, науковець, громадський і політичний діяч. Доктор філософії, доктор габілітований, дійсний член Наукового товариства імені Шевченка, почесний доктор Харківського
+                    університету.
+                </p>
+            </div>
+        </div>
+    </div>
+    <script>
+        $(".slider").owlCarousel({
+            loop: true,
+            autoplay: true,
+            autoplayTimeout: 2000, //2000ms = 2s;
+            autoplayHoverPause: true,
+        });
+    </script>
+</body>
+
+</html>
