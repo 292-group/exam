@@ -1,0 +1,144 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Total Form Validation</title>
+  <meta name="viewport" content="width=device-width, user-scalable=no">
+  <link rel="stylesheet" href="fv.css" type="text/css" />
+  <!--[if IE]>
+  <style>
+    .field .tooltip .content{ display:none; opacity:1; }
+    .field .tooltip:hover .content{ display:block; }
+  </style>
+  <![endif]-->
+</head>
+<body>
+<a class='btn github' href='https://github.com/yairEO/validator'>Github</a>
+<div id='wrap'>
+  <div class='options'>
+    <!-- 	<label>
+            <input type='checkbox' id='vfields' />
+            Vertical orientation
+        </label> -->
+    <label>
+      <input type='checkbox' class='toggleValidationTooltips' />
+      Disable vlidation tooltips
+    </label>
+  </div>
+  <h1 title='how forms should be done.'>Forms: validation, styling &amp; semantics</h1>
+  <section class='form'>
+    <form action="" method="post" novalidate>
+      <fieldset>
+        <div class="field">
+          <label>
+            <span>Name</span>
+            <input data-validate-length-range="6" data-validate-words="2" name="name" placeholder="" required="required" />
+          </label>
+          <div class='tooltip help'>
+            <span>?</span>
+            <div class='content'>
+              <b></b>
+              <p>Name must be at least 2 words</p>
+            </div>
+          </div>
+        </div>
+        <div class="field">
+          <label>
+            <span>Last Name</span>
+            <input data-validate-length-range="6" data-validate-words="2" name="name" placeholder="" required="required" />
+          </label>
+          <div class='tooltip help'>
+            <span>?</span>
+            <div class='content'>
+              <b></b>
+              <p>Name must be at least 2 words</p>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="field">
+          <label>
+            <span>email</span>
+            <input name="email" class='email' required="required" type="email" />
+          </label>
+        </div>
+
+
+
+
+
+        <div class="field">
+          <label>
+            <span>Password</span>
+            <input type="password" name="password" data-validate-length="6,8" required='required'>
+          </label>
+          <div class='tooltip help'>
+            <span>?</span>
+            <div class='content'>
+              <b></b>
+              <p>Should be of length 6 OR 8 characters</p>
+            </div>
+          </div>
+        </div>
+        <div class="field">
+          <label>
+            <span>Repeat password</span>
+            <input type="password" name="password2" data-validate-linked='password' required='required'>
+          </label>
+        </div>
+        <div class="field">
+          <label>
+            <span>Telephone</span>
+            <input type="tel" class='tel' name="phone" required='required' data-validate-length-range="8,20">
+          </label>
+          <div class='tooltip help'>
+            <span>?</span>
+            <div class='content'>
+              <b></b>
+              <p>Notice that for a phone number user can input a '+' sign, a dash '-' or a space ' '</p>
+            </div>
+          </div>
+        </div>
+      </fieldset>
+
+      <button type='submit'>Submit</button>
+      <button type='reset'>Reset</button>
+
+    </form>
+  </section>
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script src="multifield.js"></script>
+<script src="validator.js"></script>
+<script>
+  // initialize a validator instance from the "FormValidator" constructor.
+  // A "<form>" element is optionally passed as an argument, but is not a must
+  var validator = new FormValidator({"events" : ['blur', 'paste', 'change']}, document.forms[0]);
+
+  validator.texts.mySpecialInput = "wrong input" // custom error message for pattern mismatch
+
+  // on form "submit" event
+  document.forms[0].onsubmit = function(e){
+    var submit = true,
+            validatorResult = validator.checkAll(this);
+
+    console.log(validatorResult);
+    return !!validatorResult.valid;
+  }
+
+  // on form "reset" event
+  document.forms[0].onreset = function(e){
+    validator.reset();
+  }
+
+  // stuff related ONLY for this demo page:
+  $('.toggleValidationTooltips').change(function(){
+    validator.settings.alerts = !this.checked;
+
+    if( this.checked )
+      $('form .alert').remove();
+  }).prop('checked',false);
+</script>
+</body>
+</html>
