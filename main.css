@@ -1,0 +1,15 @@
+.names{
+    display: flex;
+    justify-content: end;
+}
+.name{
+    font-size: 70px;
+font-weight: 200;
+}
+span{
+    font-weight: bold;
+}
+li{
+    margin: 0 0 10px 30px;
+    list-style: none;
+}
