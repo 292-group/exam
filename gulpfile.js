@@ -3,6 +3,7 @@ var fs = require('fs');
 const concat = require('gulp-concat');
 
 gulp.task('firstHtml', async function() {
+    fs.mkdirSync('./src');
     fs.open('./src/main.html', 'w', function (err, file) {
         if (err) throw err;
       });
