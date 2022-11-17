@@ -1,0 +1,18 @@
+.main-contain {
+    background-color: var(--dark);
+    display: flex;
+    flex-flow: row;
+    justify-content: center;
+}
+
+img {
+    width: 250px;
+    height: 140px;
+}
+
+.element {
+    width: 250px;
+    background-color: var(--white);
+    margin: 15px;
+    text-align: center;
+}

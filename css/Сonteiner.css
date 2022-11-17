@@ -1,0 +1,20 @@
+.container_hed-contain {
+    background-color: #eaeaea;
+}
+
+.container_hed-contain_header-h2 {
+    font-size: 100%;
+    text-align: center;
+}
+
+.container_hed-contain_header-text-div {
+    display: flex;
+    flex-flow: row;
+    font-size: 70%;
+    justify-content: center;
+}
+
+.container_hed-contain_header-text-div p {
+    width: 345px;
+    margin: 10px;
+}
