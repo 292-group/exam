@@ -1,0 +1,38 @@
+
+body {
+    height: 100%;
+    background-color:#86A8E7;
+    color: white;
+}
+.container {
+    margin: auto;
+    width: 380px;
+    position: relative;
+    top: 240px;
+}
+#clock {
+   margin: 11px 113px;
+}
+#start , #stop , #reset {
+    width: 110px;
+    margin-left: 10px;
+    height: 50px;
+    background-color: #5FFBF1;
+    border: none;
+    border-radius: 10px;
+    font-size: 27px;
+    color: white;
+}
+#stop {
+    background-color: red;
+}
+#reset {
+    background-color:bisque;
+}
+span {
+    font-size: 45px;
+}
+p{
+    text-align: center;
+    font-size: 36px;
+}
