@@ -1,0 +1,38 @@
+*{
+    margin: 0;
+}
+.blue{
+    background-color: var(--blue);
+    width: 100%;
+    height: 200px;
+}
+.grey{
+    width: 20%;
+    height: 700px;
+    background-color:var(--grey);
+}
+.blues{
+    width: 50%;
+    height: 200px;
+    background-color: var(--blues);
+}
+.red{
+    width: 50%;
+    height: 200px;
+    background-color:var(--red);
+}
+.yellow{
+    height: 500px;
+    width: 30%;
+    background-color: var(--yellow);
+}
+.green{
+    width: 100%;
+    height: 300px;
+    background-color: var(--green);
+}
+.brown{
+    width: 100%;
+    height: 290px;
+    background-color: var(--brown);
+}
